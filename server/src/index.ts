@@ -1288,8 +1288,8 @@ const possibleClientPaths = [
 for (const clientPath of possibleClientPaths) {
   if (fs.existsSync(clientPath)) {
     app.use(express.static(clientPath));
-    app.get("*", (req, res, next) => {
-      if (req.path.startsWith("/api") || req.path.startsWith("/ws")) {
+    app.use((req, res, next) => {
+      if (req.method !== "GET" || req.path.startsWith("/api") || req.path.startsWith("/ws")) {
         return next();
       }
       res.sendFile(path.join(clientPath, "index.html"));
