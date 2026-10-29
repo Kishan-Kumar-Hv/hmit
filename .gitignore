@@ -28,3 +28,4 @@ yarn-debug.log*
 server/.env
 server/.env.*
 !server/.env.example
+*.zip
