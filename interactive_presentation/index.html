@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatvia — Phase 4 Interactive Final Presentation | Team 65 (Veltrox)</title>
+  <title>Chatvia — Phase 4 Interactive Presentation (Light Mode) | Team 65 (Veltrox)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -11,8 +11,8 @@
     
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #0b1120;
-      color: #f8fafc;
+      background-color: #f8fafc;
+      color: #0f172a;
       overflow: hidden;
       user-select: none;
     }
@@ -22,27 +22,27 @@
     .slide {
       display: none;
       opacity: 0;
-      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
-      transform: scale(0.98);
-      height: calc(100vh - 120px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transform: scale(0.99);
+      height: calc(100vh - 125px);
     }
     .slide.active {
       display: flex;
       opacity: 1;
       transform: scale(1);
     }
-    .glass-card {
-      background: rgba(30, 41, 59, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(51, 65, 85, 0.6);
+    .executive-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
     }
-    .glass-card-hover {
+    .executive-card-hover {
       transition: all 0.2s ease;
     }
-    .glass-card-hover:hover {
-      border-color: rgba(13, 148, 136, 0.8);
+    .executive-card-hover:hover {
+      border-color: #0d9488;
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.15);
+      box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.1);
     }
     /* Custom scrollbar */
     ::-webkit-scrollbar {
@@ -50,10 +50,10 @@
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0f172a;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #cbd5e1;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -64,24 +64,24 @@
 <body class="h-screen flex flex-col justify-between antialiased selection:bg-teal-500 selection:text-white">
 
   <!-- TOP PROGRESS BAR & HEADER -->
-  <header class="w-full bg-slate-900/90 border-b border-slate-800 z-50">
-    <div id="progressBar" class="h-1 bg-gradient-to-r from-teal-500 via-emerald-400 to-blue-500 transition-all duration-300" style="width: 7.14%;"></div>
+  <header class="w-full bg-white border-b border-slate-200 z-50 shadow-sm">
+    <div id="progressBar" class="h-1 bg-gradient-to-r from-teal-600 via-emerald-500 to-blue-600 transition-all duration-300" style="width: 7.14%;"></div>
     <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-500/20 text-teal-400 border border-teal-500/40">TEAM 65</span>
-        <span class="text-xs font-semibold text-slate-400">VELTROX • HACKMITTEN 2026</span>
-        <span class="text-xs text-slate-600 hidden sm:inline">|</span>
-        <span class="text-xs font-medium text-slate-400 hidden sm:inline">Phase 4 Interactive Project Presentation</span>
+        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-50 text-teal-700 border border-teal-200">TEAM 65</span>
+        <span class="text-xs font-bold text-slate-800">VELTROX • HACKMITTEN 2026</span>
+        <span class="text-xs text-slate-300 hidden sm:inline">|</span>
+        <span class="text-xs font-medium text-slate-500 hidden sm:inline">Phase 4 Interactive Project Presentation (Light Executive Edition)</span>
       </div>
       
-      <div class="flex items-center space-x-3">
-        <a href="https://chatvia-app-k7o7.onrender.com/" target="_blank" class="px-3 py-1 rounded-md text-xs font-semibold bg-teal-600 hover:bg-teal-500 text-white transition flex items-center shadow-sm shadow-teal-900/50">
+      <div class="flex items-center space-x-2.5">
+        <a href="https://chatvia-app-k7o7.onrender.com/" target="_blank" class="px-3 py-1 rounded-md text-xs font-bold bg-teal-600 hover:bg-teal-700 text-white transition flex items-center shadow-sm">
           <i class="fa-solid fa-bolt mr-1.5 text-amber-300"></i> Live Demo
         </a>
-        <a href="https://github.com/Kishan-Kumar-Hv/hmit" target="_blank" class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center">
+        <a href="https://github.com/Kishan-Kumar-Hv/hmit" target="_blank" class="px-3 py-1 rounded-md text-xs font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition flex items-center">
           <i class="fa-brands fa-github mr-1.5"></i> Repo
         </a>
-        <button onclick="toggleFullScreen()" title="Toggle Fullscreen (F)" class="p-1.5 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition">
+        <button onclick="toggleFullScreen()" title="Toggle Fullscreen (F)" class="p-1.5 rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition">
           <i class="fa-solid fa-expand text-xs"></i>
         </button>
       </div>
@@ -91,512 +91,574 @@
   <!-- MAIN SLIDES CONTAINER -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-4 flex items-center justify-center relative overflow-hidden">
 
-    <!-- SLIDE 1: TITLE & TEAM -->
+    <!-- SLIDE 1: TITLE & TEAM DETAILS -->
     <div class="slide active w-full flex flex-col justify-center items-center text-center">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-teal-400 text-xs font-semibold mb-3">
-        <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
-        <span>FINAL PHASE 4 PROJECT SUBMISSION</span>
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold mb-3 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-teal-600 animate-pulse"></span>
+        <span>FINAL PHASE 4 PROJECT SUBMISSION • TEAM 65</span>
       </div>
-      <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2">
-        CHAT<span class="text-teal-400">VIA</span>
+      <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-2">
+        CHAT<span class="text-teal-600">VIA</span>
       </h1>
-      <p class="text-lg lg:text-xl font-semibold text-teal-400/90 mb-2 max-w-3xl">
+      <p class="text-lg lg:text-xl font-bold text-teal-700 mb-2 max-w-3xl">
         Next-Generation Confidential Messaging with AI Biometrics & Client-Side Steganography
       </p>
-      <p class="text-sm text-slate-400 max-w-2xl mb-8">
+      <p class="text-sm text-slate-600 max-w-3xl mb-8 leading-relaxed">
         Eliminating the physical "last-inch" presentation vulnerability through continuous facial verification, zero-knowledge encryption, and ephemeral forensic self-healing.
       </p>
 
       <!-- Team Members Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl text-left">
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-2 mb-1">
-            <div class="w-7 h-7 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-xs">KH</div>
-            <h4 class="font-bold text-sm text-white">Kishan Kumar H V</h4>
+        <div class="executive-card p-4 rounded-xl border border-slate-200 executive-card-hover">
+          <div class="flex items-center space-x-2.5 mb-1.5">
+            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xs">KH</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Kishan Kumar H V</h4>
+              <p class="text-[11px] font-semibold text-teal-700">Team Lead & Cloud Architect</p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-teal-400 mb-2">Team Lead & Cloud Architect</p>
-          <p class="text-xs text-slate-400 leading-relaxed">Render PaaS deployment, Express 5 reverse proxy, Supabase SSL pooler engineering, CI/CD pipeline & QA.</p>
+          <p class="text-xs text-slate-600 leading-relaxed mt-2">Production PaaS deployment on Render, Express 5 reverse proxy, Supabase SSL pooler engineering, CI/CD pipeline, and QA.</p>
         </div>
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-2 mb-1">
-            <div class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs">SJ</div>
-            <h4 class="font-bold text-sm text-white">Santhosh J R</h4>
+
+        <div class="executive-card p-4 rounded-xl border border-slate-200 executive-card-hover">
+          <div class="flex items-center space-x-2.5 mb-1.5">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">SJ</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Santhosh J R</h4>
+              <p class="text-[11px] font-semibold text-blue-700">Full-Stack & Biometrics</p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-blue-400 mb-2">Full-Stack & Biometrics</p>
-          <p class="text-xs text-slate-400 leading-relaxed">FastAPI InspireFace integration, 512-d feature extraction, WebSocket messaging hub & active surveillance loop.</p>
+          <p class="text-xs text-slate-600 leading-relaxed mt-2">FastAPI InspireFace integration, 512-d feature extraction, WebSocket messaging hub, active surveillance loop, and alert banners.</p>
         </div>
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-2 mb-1">
-            <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">SB</div>
-            <h4 class="font-bold text-sm text-white">Suhas B R</h4>
+
+        <div class="executive-card p-4 rounded-xl border border-slate-200 executive-card-hover">
+          <div class="flex items-center space-x-2.5 mb-1.5">
+            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">SB</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Suhas B R</h4>
+              <p class="text-[11px] font-semibold text-emerald-700">Security & Steganography</p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-emerald-400 mb-2">Security & Steganography</p>
-          <p class="text-xs text-slate-400 leading-relaxed">Client WebCrypto AES-GCM, PBKDF2 friendship key derivation, IndexedDB key persistence & randomized LSB.</p>
+          <p class="text-xs text-slate-600 leading-relaxed mt-2">Client WebCrypto AES-GCM, PBKDF2 friendship key derivation, non-exportable IndexedDB key persistence, and randomized LSB.</p>
         </div>
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-2 mb-1">
-            <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">DK</div>
-            <h4 class="font-bold text-sm text-white">Dhruva Kumar V M</h4>
+
+        <div class="executive-card p-4 rounded-xl border border-slate-200 executive-card-hover">
+          <div class="flex items-center space-x-2.5 mb-1.5">
+            <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs">DK</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Dhruva Kumar V M</h4>
+              <p class="text-[11px] font-semibold text-purple-700">Frontend Lead & UI/UX</p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-amber-400 mb-2">Frontend Lead & UI/UX</p>
-          <p class="text-xs text-slate-400 leading-relaxed">React 19 SPA architecture, responsive Tailwind styling, WebRTC camera lifecycle management & documentation.</p>
+          <p class="text-xs text-slate-600 leading-relaxed mt-2">React 19 SPA architecture, responsive Tailwind styling, WebRTC camera lifecycle management, and final documentation.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 2: THE PROBLEM STATEMENT & ANALYSIS -->
+    <!-- SLIDE 2: EXECUTIVE SUMMARY & JOURNEY -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-4">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">PHASE 1 FOUNDATION</span>
-        <h2 class="text-2xl font-bold text-white">Problem Statement & The "Last-Inch" Threat Model</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">PROJECT PROGRESSION</span>
+        <h2 class="text-2xl font-bold text-slate-900">Executive Summary: The Complete Journey (Phases 1 → 4)</h2>
       </div>
 
-      <div class="glass-card p-4 rounded-xl border-l-4 border-l-teal-500 mb-6 bg-slate-900/60">
-        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Original Assigned Problem Statement</p>
-        <p class="text-sm italic text-slate-200 leading-relaxed">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-teal-600">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-50 text-teal-700">PHASE 1</span>
+          <h3 class="font-bold text-sm text-slate-900 mt-2 mb-1">Ideation & Cardboard</h3>
+          <p class="text-xs text-slate-600 mb-3 font-medium">Offline Brainstorming</p>
+          <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+            <li>• Conceived 3-tier defense on physical cardboard sheet.</li>
+            <li>• Analyzed physical shoulder-surfing threat models.</li>
+            <li>• Rejected client WASM due to battery drain & inspection.</li>
+            <li>• Established ethical rule: Zero raw photos stored.</li>
+            <li>• Designed randomized PRNG LSB algorithm with CVS1 tag.</li>
+          </ul>
+        </div>
+
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-blue-600">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-700">PHASE 2</span>
+          <h3 class="font-bold text-sm text-slate-900 mt-2 mb-1">Core Engineering</h3>
+          <p class="text-xs text-slate-600 mb-3 font-medium">Implementation Sprints</p>
+          <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+            <li>• Sprint 1: InspireFace 512-d feature extraction.</li>
+            <li>• Sprint 2: WebSocket chat hub & 25MB attachments.</li>
+            <li>• Sprint 3: Client WebCrypto & IndexedDB key persistence.</li>
+            <li>• Sprint 4: Active camera surveillance & timeout aborts.</li>
+            <li>• Built Express 5 single-port SPA reverse proxy.</li>
+          </ul>
+        </div>
+
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-amber-600">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-700">PHASE 3</span>
+          <h3 class="font-bold text-sm text-slate-900 mt-2 mb-1">Testing & Hardening</h3>
+          <p class="text-xs text-slate-600 mb-3 font-medium">Quality Assurance</p>
+          <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+            <li>• Executed 20 test cases across 7 modules (100% Pass).</li>
+            <li>• Validated single vs multi-face gating (HTTP 422).</li>
+            <li>• Proved 1.5s shoulder-surfer auto-concealment.</li>
+            <li>• Tested 25MB attachment quota & 2s timeout aborts.</li>
+            <li>• Verified database ephemeral self-healing cleanup.</li>
+          </ul>
+        </div>
+
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-emerald-600">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">PHASE 4</span>
+          <h3 class="font-bold text-sm text-slate-900 mt-2 mb-1">Cloud Delivery</h3>
+          <p class="text-xs text-slate-600 mb-3 font-medium">Production Launch</p>
+          <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+            <li>• Live single-domain PaaS deployment on Render.</li>
+            <li>• Supabase PostgreSQL 16 SSL pooler integration.</li>
+            <li>• Automated CI/CD pipeline from GitHub main.</li>
+            <li>• Sub-80ms message delivery; sub-70ms face check.</li>
+            <li>• Master documentation PDF & interactive presentation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: PROBLEM STATEMENT & THREAT MODEL -->
+    <div class="slide w-full flex-col justify-start overflow-y-auto">
+      <div class="mb-4">
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">FOUNDATION & THREAT MODEL</span>
+        <h2 class="text-2xl font-bold text-slate-900">Problem Statement & The "Last-Inch" Threat Model</h2>
+      </div>
+
+      <div class="executive-card p-4 rounded-xl border-l-4 border-l-teal-600 mb-4 bg-teal-50/50">
+        <p class="text-xs font-bold text-teal-900 uppercase tracking-wider mb-1">Original Assigned Problem Statement</p>
+        <p class="text-sm italic text-slate-700 leading-relaxed">
           "Design and engineer a real-time secure communication system that eliminates vulnerabilities in both data transmission and physical message presentation. The application must guarantee that confidential exchanges remain fully protected from over-the-shoulder eavesdropping, unauthorized physical device access, and persistent forensic extraction, while providing zero-knowledge verifiable privacy and high usability."
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-3 mb-2">
-            <div class="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-sm"><i class="fa-solid fa-eye-slash"></i></div>
-            <h3 class="font-bold text-sm text-white">The "Last-Inch" Presentation Gap</h3>
+        <div class="executive-card p-4 rounded-xl">
+          <div class="flex items-center space-x-2.5 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-eye-slash"></i></div>
+            <h3 class="font-bold text-sm text-slate-900">1. The "Last-Inch" Presentation Vulnerability</h3>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            While E2EE (Signal, WhatsApp) prevents network interception, the instant a message decrypts on screen, it exists in plain sight. An unauthorized bystander peering over the shoulder compromises full confidentiality.
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Conventional E2EE (Signal, WhatsApp) encrypts data in flight via TLS. However, once decrypted onto the recipient's screen, it exists in plain sight. In public environments—coffee shops, shared offices, airports, and transit—shoulder surfers and bystanders compromise confidentiality completely.
           </p>
         </div>
 
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-3 mb-2">
-            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm"><i class="fa-solid fa-fingerprint"></i></div>
-            <h3 class="font-bold text-sm text-white">Static vs Continuous Authentication</h3>
+        <div class="executive-card p-4 rounded-xl">
+          <div class="flex items-center space-x-2.5 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-fingerprint"></i></div>
+            <h3 class="font-bold text-sm text-slate-900">2. Static vs Continuous Active Authentication</h3>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Existing apps authenticate biometrics (Face ID/PIN) once upon app opening. If the device remains unlocked on a table or passed to a peer, unauthorized individuals can read chats without restraint.
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Modern apps authenticate biometrics (Face ID, PIN) only ONCE when launching the application. If an unlocked smartphone or laptop is left unattended on a desk or handed to a coworker, any unauthorized person has unrestricted access to private messages.
           </p>
         </div>
 
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-3 mb-2">
-            <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm"><i class="fa-solid fa-hard-drive"></i></div>
-            <h3 class="font-bold text-sm text-white">Forensic Media Residue & Storage</h3>
+        <div class="executive-card p-4 rounded-xl">
+          <div class="flex items-center space-x-2.5 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-hard-drive"></i></div>
+            <h3 class="font-bold text-sm text-slate-900">3. Persistent Forensic Media Residue & Caches</h3>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Decrypted media files linger in OS caches, device galleries, and SQLite databases. Post-deletion forensic memory dumps reliably recover sensitive attachments and cached thumbnails.
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Standard messaging apps write received attachments to local device flash storage, OS media caches, and SQLite databases. Even after 'deleting' messages or enabling disappearing timers, forensic extraction tools routinely recover sensitive image attachments and thumbnail artifacts.
           </p>
         </div>
 
-        <div class="glass-card p-4 rounded-xl border border-slate-700/60">
-          <div class="flex items-center space-x-3 mb-2">
-            <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm"><i class="fa-solid fa-network-wired"></i></div>
-            <h3 class="font-bold text-sm text-white">Traffic Observability & Deniability</h3>
+        <div class="executive-card p-4 rounded-xl">
+          <div class="flex items-center space-x-2.5 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="font-bold text-sm text-slate-900">4. Traffic Observability & Lack of Deniability</h3>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Sending raw ciphertexts signals to ISPs and network monitors that sensitive communication is underway. Users lack plausible deniability without an innocuous covert carrier.
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Transmitting raw encrypted binary blocks openly signals to network firewalls, internet service providers (ISPs), and eavesdroppers that sensitive, confidential communication is taking place. Users completely lack plausible deniability without an innocuous, covert carrier mechanism.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 3: PROPOSED SOLUTION & CORE PILLARS -->
+    <!-- SLIDE 4: PROPOSED SOLUTION & PILLARS -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-4">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">DEFENSE-IN-DEPTH</span>
-        <h2 class="text-2xl font-bold text-white">Proposed Solution: 4 Architectural Pillars</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">DEFENSE-IN-DEPTH</span>
+        <h2 class="text-2xl font-bold text-slate-900">Proposed Solution: 4 Architectural Pillars</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
-        <!-- Pillar 1 -->
-        <div class="glass-card p-4 rounded-xl border border-teal-500/40 flex flex-col justify-between">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-teal-600 flex flex-col justify-between">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-lg mb-3">
+            <div class="w-9 h-9 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center text-base mb-3 font-bold">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3 class="font-bold text-sm text-white mb-1">Active Face Guardian</h3>
-            <p class="text-xs font-semibold text-teal-400 mb-3">Continuous Vision Shield</p>
-            <ul class="text-xs text-slate-300 space-y-2">
+            <h3 class="font-bold text-sm text-slate-900 mb-1">Active Face Guardian</h3>
+            <p class="text-[11px] font-bold text-teal-700 mb-3">Continuous Vision Shield</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
               <li>• InspireFace 512-d embeddings</li>
-              <li>• Cosine threshold verification (>= 0.70)</li>
-              <li>• Requires exactly 1 face present</li>
+              <li>• Cosine threshold check (>= 0.70)</li>
+              <li>• Enforces exactly 1 face present</li>
               <li>• Continuous 1.5s surveillance loop</li>
-              <li>• Auto-conceals if user turns away or bystander detected</li>
+              <li>• Auto-conceals if user looks away</li>
+              <li>• Warning banner if bystander seen</li>
             </ul>
           </div>
-          <span class="mt-4 px-2.5 py-1 text-center rounded bg-slate-800 text-[10px] text-teal-400 font-mono">Vision AI Engine</span>
+          <span class="mt-4 px-2 py-1 text-center rounded bg-slate-100 text-[10px] text-teal-800 font-mono font-bold">Vision AI Engine</span>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="glass-card p-4 rounded-xl border border-blue-500/40 flex flex-col justify-between">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-blue-600 flex flex-col justify-between">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg mb-3">
+            <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-base mb-3 font-bold">
               <i class="fa-solid fa-image"></i>
             </div>
-            <h3 class="font-bold text-sm text-white mb-1">Randomized Stego</h3>
-            <p class="text-xs font-semibold text-blue-400 mb-3">Plausible Deniability</p>
-            <ul class="text-xs text-slate-300 space-y-2">
-              <li>• Disguises text inside harmless PNGs</li>
-              <li>• 24-byte header with CVS1 magic tag</li>
-              <li>• 16-byte cryptographically secure seed</li>
+            <h3 class="font-bold text-sm text-slate-900 mb-1">Randomized Stego</h3>
+            <p class="text-[11px] font-bold text-blue-700 mb-3">Plausible Deniability</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+              <li>• Hides text in innocent PNGs</li>
+              <li>• 24-byte header with CVS1 tag</li>
+              <li>• 16-byte cryptographic random seed</li>
               <li>• PRNG uniform bit scattering in RGB</li>
-              <li>• Zero perceptual visual distortion</li>
+              <li>• Zero visual histogram changes</li>
+              <li>• Plausible deniability on the wire</li>
             </ul>
           </div>
-          <span class="mt-4 px-2.5 py-1 text-center rounded bg-slate-800 text-[10px] text-blue-400 font-mono">NumPy LSB Engine</span>
+          <span class="mt-4 px-2 py-1 text-center rounded bg-slate-100 text-[10px] text-blue-800 font-mono font-bold">NumPy LSB Engine</span>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="glass-card p-4 rounded-xl border border-emerald-500/40 flex flex-col justify-between">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-emerald-600 flex flex-col justify-between">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-base mb-3 font-bold">
               <i class="fa-solid fa-key"></i>
             </div>
-            <h3 class="font-bold text-sm text-white mb-1">Client WebCrypto</h3>
-            <p class="text-xs font-semibold text-emerald-400 mb-3">Zero-Knowledge Keys</p>
-            <ul class="text-xs text-slate-300 space-y-2">
+            <h3 class="font-bold text-sm text-slate-900 mb-1">Client WebCrypto</h3>
+            <p class="text-[11px] font-bold text-emerald-700 mb-3">Zero-Knowledge Keys</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
               <li>• Mutual friendship passphrase</li>
-              <li>• PBKDF2-SHA256 (100k iterations)</li>
+              <li>• PBKDF2-SHA256 (100k rounds)</li>
               <li>• AES-GCM-256 authenticated cipher</li>
               <li>• Non-exportable keys in IndexedDB</li>
-              <li>• Server never sees keys or plaintext</li>
+              <li>• Server never sees keys or text</li>
+              <li>• Resilient against DB breaches</li>
             </ul>
           </div>
-          <span class="mt-4 px-2.5 py-1 text-center rounded bg-slate-800 text-[10px] text-emerald-400 font-mono">Browser WebCrypto</span>
+          <span class="mt-4 px-2 py-1 text-center rounded bg-slate-100 text-[10px] text-emerald-800 font-mono font-bold">Browser WebCrypto</span>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="glass-card p-4 rounded-xl border border-amber-500/40 flex flex-col justify-between">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-purple-600 flex flex-col justify-between">
           <div>
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-3">
+            <div class="w-9 h-9 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center text-base mb-3 font-bold">
               <i class="fa-solid fa-broom"></i>
             </div>
-            <h3 class="font-bold text-sm text-white mb-1">Forensic Self-Healing</h3>
-            <p class="text-xs font-semibold text-amber-400 mb-3">Ephemeral Destruction</p>
-            <ul class="text-xs text-slate-300 space-y-2">
+            <h3 class="font-bold text-sm text-slate-900 mb-1">Forensic Self-Healing</h3>
+            <p class="text-[11px] font-bold text-purple-700 mb-3">Ephemeral Destruction</p>
+            <ul class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
               <li>• One-time message decryption</li>
               <li>• Atomic PostgreSQL transaction</li>
-              <li>• Restores pristine original carrier PNG</li>
+              <li>• Restores pristine original PNG</li>
               <li>• Permanently deletes recovery copy</li>
-              <li>• Zero forensic traces on disk/db</li>
+              <li>• Zero forensic traces on disk/DB</li>
+              <li>• Forward secrecy guaranteed</li>
             </ul>
           </div>
-          <span class="mt-4 px-2.5 py-1 text-center rounded bg-slate-800 text-[10px] text-amber-400 font-mono">PostgreSQL ACID</span>
+          <span class="mt-4 px-2 py-1 text-center rounded bg-slate-100 text-[10px] text-purple-800 font-mono font-bold">PostgreSQL ACID</span>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 4: METHODOLOGY & WORKFLOW -->
+    <!-- SLIDE 5: SYSTEM METHODOLOGY -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">EXECUTION PIPELINE</span>
-        <h2 class="text-2xl font-bold text-white">System Methodology: 8-Phase Lifecycle</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">EXECUTION PIPELINE</span>
+        <h2 class="text-2xl font-bold text-slate-900">System Methodology: 8-Phase Lifecycle</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-teal-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-teal-400">PHASE 01</span>
-            <i class="fa-solid fa-user-check text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-teal-700">PHASE 01</span>
+            <i class="fa-solid fa-user-check text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Registration & Consent</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">Webcam captures face; InspireFace validates 1 face; 512-d template encrypted via AES-256-GCM; raw photo purged.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Registration & Consent</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Webcam captures face; InspireFace validates 1 face; 512-d template encrypted via AES-256-GCM; raw photo purged.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-teal-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-teal-400">PHASE 02</span>
-            <i class="fa-solid fa-handshake text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-teal-700">PHASE 02</span>
+            <i class="fa-solid fa-handshake text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Friendship Handshake</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">Users locate peers via unique 32-char User ID codes; friend requests accepted; private bilateral channel opened.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Friendship Handshake</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Users locate peers via unique 32-char User ID codes; friend requests accepted; private bilateral channel opened.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-teal-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-teal-400">PHASE 03</span>
-            <i class="fa-solid fa-lock text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-teal-700">PHASE 03</span>
+            <i class="fa-solid fa-lock text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Key Derivation</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">Shared passphrase entered once; WebCrypto derives non-exportable AES-GCM key into browser IndexedDB.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Key Derivation</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Shared passphrase entered once; WebCrypto derives non-exportable AES-GCM key into browser IndexedDB.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-teal-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-teal-400">PHASE 04</span>
-            <i class="fa-solid fa-envelope-open-text text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-teal-700">PHASE 04</span>
+            <i class="fa-solid fa-envelope-open-text text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Steganographic Send</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">Ciphertext embedded into PNG carrier via randomized PRNG LSB. Stego image and recovery copy saved to server.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Steganographic Send</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Ciphertext embedded into PNG carrier via randomized PRNG LSB. Stego image and recovery copy saved to server.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-blue-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-blue-400">PHASE 05</span>
-            <i class="fa-solid fa-tower-broadcast text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-blue-700">PHASE 05</span>
+            <i class="fa-solid fa-tower-broadcast text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Real-Time Delivery</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">BYTEA stored in PostgreSQL; WebSocket server broadcasts notification; recipient UI renders carrier card.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Real-Time Delivery</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">BYTEA stored in PostgreSQL; WebSocket server broadcasts notification; recipient UI renders carrier card.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-blue-400">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-blue-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-blue-400">PHASE 06</span>
-            <i class="fa-solid fa-face-smile text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-blue-700">PHASE 06</span>
+            <i class="fa-solid fa-face-smile text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Biometric Unlock</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">WebRTC camera captures recipient; AI validates cosine similarity >= 0.70; payload extracted and revealed.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Biometric Unlock</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">WebRTC camera captures recipient; AI validates cosine similarity >= 0.70; payload extracted and revealed.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-blue-400">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-blue-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-blue-400">PHASE 07</span>
-            <i class="fa-solid fa-video text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-blue-700">PHASE 07</span>
+            <i class="fa-solid fa-video text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Active Surveillance</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">Background loop verifies face every 1.5s; auto-conceals if user looks away or secondary face detected.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Active Surveillance</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Background loop verifies face every 1.5s; auto-conceals if user looks away or secondary face detected.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-blue-400">
+        <div class="executive-card p-3 rounded-xl border-t-2 border-t-blue-600">
           <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-blue-400">PHASE 08</span>
-            <i class="fa-solid fa-trash-can text-xs text-slate-500"></i>
+            <span class="text-xs font-bold text-blue-700">PHASE 08</span>
+            <i class="fa-solid fa-trash-can text-xs text-slate-400"></i>
           </div>
-          <h4 class="font-bold text-xs text-white mb-1">Forensic Self-Healing</h4>
-          <p class="text-[11px] text-slate-400 leading-normal">PostgreSQL restores original clean PNG to attachment; recovery copy nullified; stego bytes eliminated.</p>
+          <h4 class="font-bold text-xs text-slate-900 mb-1">Forensic Self-Healing</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed">PostgreSQL restores original clean PNG to attachment; recovery copy nullified; stego bytes eliminated.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 5: SYSTEM ARCHITECTURE (INTERACTIVE DRILLDOWN) -->
+    <!-- SLIDE 6: SYSTEM ARCHITECTURE -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3 flex items-center justify-between">
         <div>
-          <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">SYSTEM DESIGN</span>
-          <h2 class="text-2xl font-bold text-white">4-Tier Decoupled Cloud Architecture</h2>
+          <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">SYSTEM DESIGN</span>
+          <h2 class="text-2xl font-bold text-slate-900">4-Tier Decoupled Cloud Architecture</h2>
         </div>
-        <span class="text-xs text-slate-400 italic">Click on any tier below for technical drill-down</span>
+        <span class="text-xs text-slate-500 italic">Click on any tier below for technical drill-down</span>
       </div>
 
-      <!-- Interactive Architecture Grid -->
-      <div class="grid grid-cols-1 gap-3">
+      <div class="space-y-3">
         <!-- Tier 1 -->
-        <div onclick="selectArchTier(1)" id="tier1-box" class="glass-card p-3 rounded-xl border-l-4 border-l-teal-500 cursor-pointer hover:bg-slate-800/80 transition">
+        <div onclick="selectArchTier(1)" id="tier1-box" class="executive-card p-3.5 rounded-xl border-l-4 border-l-teal-600 cursor-pointer hover:bg-teal-50/40 transition">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
-              <span class="text-xs font-bold px-2 py-0.5 rounded bg-teal-500/20 text-teal-300">TIER 1</span>
-              <h3 class="text-sm font-bold text-white">Presentation Tier — React 19 Single Page Application</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">TIER 1</span>
+              <h3 class="text-sm font-bold text-slate-900">Presentation Tier — React 19 Single Page Application</h3>
             </div>
-            <span class="text-xs text-teal-400 font-mono">WebCrypto • WebSockets • WebRTC MediaStream</span>
+            <span class="text-xs text-teal-700 font-mono font-semibold">WebCrypto • WebSockets • WebRTC MediaStream</span>
           </div>
-          <p class="text-xs text-slate-300 mt-1">Client-side AES-GCM derivation, non-exportable IndexedDB key cache, real-time camera sampling, and continuous 1.5s active viewer surveillance loop.</p>
+          <p class="text-xs text-slate-600 mt-1">Client-side AES-GCM derivation, non-exportable IndexedDB key cache, real-time camera sampling, and continuous 1.5s active viewer surveillance loop.</p>
         </div>
 
         <!-- Tier 2 -->
-        <div onclick="selectArchTier(2)" id="tier2-box" class="glass-card p-3 rounded-xl border-l-4 border-l-blue-500 cursor-pointer hover:bg-slate-800/80 transition">
+        <div onclick="selectArchTier(2)" id="tier2-box" class="executive-card p-3.5 rounded-xl border-l-4 border-l-blue-600 cursor-pointer hover:bg-blue-50/40 transition">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
-              <span class="text-xs font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">TIER 2</span>
-              <h3 class="text-sm font-bold text-white">Application Server & Gateway — Node.js + Express 5</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">TIER 2</span>
+              <h3 class="text-sm font-bold text-slate-900">Application Server & Gateway — Node.js + Express 5</h3>
             </div>
-            <span class="text-xs text-blue-400 font-mono">Reverse Proxy • JWT Auth • Multer 25MB • WS Hub</span>
+            <span class="text-xs text-blue-700 font-mono font-semibold">Reverse Proxy • JWT Auth • Multer 25MB • WS Hub</span>
           </div>
-          <p class="text-xs text-slate-300 mt-1">Single-port reverse proxy serving Vite SPA statically, JWT session verification, AES-256-GCM face template encryption, and Supabase SSL connection pooler.</p>
+          <p class="text-xs text-slate-600 mt-1">Single-port reverse proxy serving Vite SPA statically, JWT session verification, AES-256-GCM face template encryption, and Supabase SSL connection pooler.</p>
         </div>
 
-        <!-- Tier 3 & 4 split -->
+        <!-- Tier 3 & 4 Split -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <!-- Tier 3 -->
-          <div onclick="selectArchTier(3)" id="tier3-box" class="glass-card p-3 rounded-xl border-l-4 border-l-emerald-500 cursor-pointer hover:bg-slate-800/80 transition">
+          <div onclick="selectArchTier(3)" id="tier3-box" class="executive-card p-3.5 rounded-xl border-l-4 border-l-emerald-600 cursor-pointer hover:bg-emerald-50/40 transition">
             <div class="flex items-center space-x-2 mb-1">
-              <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">TIER 3</span>
-              <h3 class="text-sm font-bold text-white">AI Vision & Stego Microservice</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">TIER 3</span>
+              <h3 class="text-sm font-bold text-slate-900">AI Vision & Stego Microservice</h3>
             </div>
-            <p class="text-xs text-emerald-400 font-mono mb-1">Python 3.12 • FastAPI • InspireFace • OpenCV</p>
-            <p class="text-xs text-slate-300">Deep face detection, 512-d feature vector extraction, cosine similarity matching (>= 0.70), and NumPy randomized PRNG LSB steganography.</p>
+            <p class="text-xs text-emerald-700 font-mono font-semibold mb-1">Python 3.12 • FastAPI • InspireFace • OpenCV</p>
+            <p class="text-xs text-slate-600">Deep face detection, 512-d feature vector extraction, cosine similarity matching (>= 0.70), and NumPy randomized PRNG LSB steganography.</p>
           </div>
 
-          <!-- Tier 4 -->
-          <div onclick="selectArchTier(4)" id="tier4-box" class="glass-card p-3 rounded-xl border-l-4 border-l-amber-500 cursor-pointer hover:bg-slate-800/80 transition">
+          <div onclick="selectArchTier(4)" id="tier4-box" class="executive-card p-3.5 rounded-xl border-l-4 border-l-purple-600 cursor-pointer hover:bg-purple-50/40 transition">
             <div class="flex items-center space-x-2 mb-1">
-              <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">TIER 4</span>
-              <h3 class="text-sm font-bold text-white">Persistence Tier — PostgreSQL 16 (Supabase)</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">TIER 4</span>
+              <h3 class="text-sm font-bold text-slate-900">Persistence — PostgreSQL 16 (Supabase)</h3>
             </div>
-            <p class="text-xs text-amber-400 font-mono mb-1">BYTEA Blobs • SSL Pooler • Foreign Key Cascades</p>
-            <p class="text-xs text-slate-300">Relational schema storing encrypted biometrics, binary attachments up to 25MB, salted passphrase hashes, and self-healing stego restoration tables.</p>
+            <p class="text-xs text-purple-700 font-mono font-semibold mb-1">BYTEA Blobs • SSL Pooler • Foreign Key Cascades</p>
+            <p class="text-xs text-slate-600">Relational schema storing encrypted biometrics, binary attachments up to 25MB, salted passphrase hashes, and self-healing stego restoration tables.</p>
           </div>
         </div>
       </div>
 
       <!-- Detail Box -->
-      <div id="archDetailBox" class="mt-3 p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300">
-        <span class="font-bold text-teal-400">Architecture Insight:</span> Click any tier above to inspect protocols, ports, and data flow parameters.
+      <div id="archDetailBox" class="mt-3 p-3 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-700">
+        <span class="font-bold text-teal-800">Architecture Insight:</span> Click any tier above to inspect protocols, ports, and data flow parameters.
       </div>
     </div>
 
-    <!-- SLIDE 6: TECHNOLOGIES & TOOLS USED -->
+    <!-- SLIDE 7: TECHNOLOGIES & TOOLS -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">FULL STACK BREAKDOWN</span>
-        <h2 class="text-2xl font-bold text-white">Technologies, Frameworks & Tooling</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">FULL STACK BREAKDOWN</span>
+        <h2 class="text-2xl font-bold text-slate-900">Technologies, Frameworks & Tooling Stack</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        <!-- Frontend -->
-        <div class="glass-card p-4 rounded-xl border border-teal-500/40">
-          <h3 class="font-bold text-sm text-white mb-2 pb-1 border-b border-slate-700 flex items-center">
-            <i class="fa-brands fa-react mr-2 text-teal-400"></i> Frontend UI & Security
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-teal-600">
+          <h3 class="font-bold text-sm text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center">
+            <i class="fa-brands fa-react mr-2 text-teal-600"></i> Frontend UI & Security
           </h3>
           <div class="space-y-2 text-xs">
-            <div><span class="font-bold text-teal-300">React 19 & TypeScript:</span> <span class="text-slate-300">Component architecture and strict compile-time types.</span></div>
-            <div><span class="font-bold text-teal-300">Vite 8:</span> <span class="text-slate-300">Blazing fast modern bundler and production compiler.</span></div>
-            <div><span class="font-bold text-teal-300">Tailwind CSS:</span> <span class="text-slate-300">Responsive ergonomics, dark theme, and fluid layout.</span></div>
-            <div><span class="font-bold text-teal-300">Web Crypto API:</span> <span class="text-slate-300">Client PBKDF2 key derivation and AES-GCM cipher.</span></div>
-            <div><span class="font-bold text-teal-300">IndexedDB:</span> <span class="text-slate-300">Non-exportable local cryptographic key persistence.</span></div>
-            <div><span class="font-bold text-teal-300">WebRTC MediaStream:</span> <span class="text-slate-300">Live webcam feed acquisition and frame capture.</span></div>
+            <div><span class="font-bold text-slate-900">React 19 & TypeScript:</span> <span class="text-slate-600">Component architecture & strict compile-time types.</span></div>
+            <div><span class="font-bold text-slate-900">Vite 8:</span> <span class="text-slate-600">High-speed modern bundler & asset optimizer.</span></div>
+            <div><span class="font-bold text-slate-900">Tailwind CSS:</span> <span class="text-slate-600">Utility-first responsive ergonomics & themes.</span></div>
+            <div><span class="font-bold text-slate-900">Web Crypto API:</span> <span class="text-slate-600">Client PBKDF2 key derivation & AES-GCM cipher.</span></div>
+            <div><span class="font-bold text-slate-900">IndexedDB:</span> <span class="text-slate-600">Non-exportable local cryptographic key persistence.</span></div>
+            <div><span class="font-bold text-slate-900">WebRTC MediaStream:</span> <span class="text-slate-600">Live webcam feed acquisition & frame sampling.</span></div>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="glass-card p-4 rounded-xl border border-blue-500/40">
-          <h3 class="font-bold text-sm text-white mb-2 pb-1 border-b border-slate-700 flex items-center">
-            <i class="fa-brands fa-node-js mr-2 text-blue-400"></i> Backend & Real-Time
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-blue-600">
+          <h3 class="font-bold text-sm text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center">
+            <i class="fa-brands fa-node-js mr-2 text-blue-600"></i> Backend & Real-Time
           </h3>
           <div class="space-y-2 text-xs">
-            <div><span class="font-bold text-blue-300">Node.js & Express 5:</span> <span class="text-slate-300">API gateway and single-port reverse proxy.</span></div>
-            <div><span class="font-bold text-blue-300">WebSockets (ws):</span> <span class="text-slate-300">Sub-80ms real-time event broadcasts and presence.</span></div>
-            <div><span class="font-bold text-blue-300">JWT & bcrypt:</span> <span class="text-slate-300">Stateless bearer auth and salted password hashing.</span></div>
-            <div><span class="font-bold text-blue-300">Multer:</span> <span class="text-slate-300">Memory buffered multipart attachment stream (25MB).</span></div>
-            <div><span class="font-bold text-blue-300">node-postgres (pg):</span> <span class="text-slate-300">Connection pool with dynamic SSL support.</span></div>
+            <div><span class="font-bold text-slate-900">Node.js & Express 5:</span> <span class="text-slate-600">API gateway & single-port reverse proxy.</span></div>
+            <div><span class="font-bold text-slate-900">WebSockets (ws):</span> <span class="text-slate-600">Sub-80ms real-time event broadcasts & presence.</span></div>
+            <div><span class="font-bold text-slate-900">JWT & bcrypt:</span> <span class="text-slate-600">Stateless bearer auth & salted password hashing.</span></div>
+            <div><span class="font-bold text-slate-900">Multer:</span> <span class="text-slate-600">Memory buffered multipart attachment stream (25MB).</span></div>
+            <div><span class="font-bold text-slate-900">node-postgres (pg):</span> <span class="text-slate-600">Connection pool with dynamic SSL support.</span></div>
           </div>
         </div>
 
-        <!-- AI & Stego -->
-        <div class="glass-card p-4 rounded-xl border border-emerald-500/40">
-          <h3 class="font-bold text-sm text-white mb-2 pb-1 border-b border-slate-700 flex items-center">
-            <i class="fa-solid fa-brain mr-2 text-emerald-400"></i> AI Vision & Stego
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-emerald-600">
+          <h3 class="font-bold text-sm text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center">
+            <i class="fa-solid fa-brain mr-2 text-emerald-600"></i> AI Vision & Stego
           </h3>
           <div class="space-y-2 text-xs">
-            <div><span class="font-bold text-emerald-300">Python 3.12 & FastAPI:</span> <span class="text-slate-300">High-throughput async computer vision server.</span></div>
-            <div><span class="font-bold text-emerald-300">InspireFace SDK:</span> <span class="text-slate-300">512-d feature extraction and cosine verification.</span></div>
-            <div><span class="font-bold text-emerald-300">OpenCV (cv2):</span> <span class="text-slate-300">Matrix decoding, alignment, and face crop checks.</span></div>
-            <div><span class="font-bold text-emerald-300">NumPy 2.4:</span> <span class="text-slate-300">Vectorized PRNG bit scattering across RGB channels.</span></div>
-            <div><span class="font-bold text-emerald-300">Pillow (PIL):</span> <span class="text-slate-300">Lossless RGB PNG image encoding and decoding.</span></div>
+            <div><span class="font-bold text-slate-900">Python 3.12 & FastAPI:</span> <span class="text-slate-600">High-throughput async vision microservice.</span></div>
+            <div><span class="font-bold text-slate-900">InspireFace SDK:</span> <span class="text-slate-600">512-d feature extraction & cosine verification.</span></div>
+            <div><span class="font-bold text-slate-900">OpenCV (cv2):</span> <span class="text-slate-600">Matrix decoding, alignment & face crop checks.</span></div>
+            <div><span class="font-bold text-slate-900">NumPy 2.4:</span> <span class="text-slate-600">Vectorized PRNG bit scattering across RGB channels.</span></div>
+            <div><span class="font-bold text-slate-900">Pillow (PIL):</span> <span class="text-slate-600">Lossless RGB PNG image encoding & decoding.</span></div>
           </div>
         </div>
 
-        <!-- Database & Cloud -->
-        <div class="glass-card p-4 rounded-xl border border-amber-500/40">
-          <h3 class="font-bold text-sm text-white mb-2 pb-1 border-b border-slate-700 flex items-center">
-            <i class="fa-solid fa-cloud mr-2 text-amber-400"></i> Cloud & Storage
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-purple-600">
+          <h3 class="font-bold text-sm text-slate-900 mb-2 pb-1 border-b border-slate-200 flex items-center">
+            <i class="fa-solid fa-cloud mr-2 text-purple-600"></i> Cloud & Storage
           </h3>
           <div class="space-y-2 text-xs">
-            <div><span class="font-bold text-amber-300">PostgreSQL 16:</span> <span class="text-slate-300">ACID storage with binary BYTEA attachments.</span></div>
-            <div><span class="font-bold text-amber-300">Supabase Managed DB:</span> <span class="text-slate-300">Cloud database with SSL transaction pooler.</span></div>
-            <div><span class="font-bold text-amber-300">Render PaaS:</span> <span class="text-slate-300">Production single-domain cloud hosting.</span></div>
-            <div><span class="font-bold text-amber-300">Git & GitHub:</span> <span class="text-slate-300">Automated continuous deployment from main.</span></div>
-            <div><span class="font-bold text-amber-300">ReportLab & PyMuPDF:</span> <span class="text-slate-300">Automated publication-grade PDF generation.</span></div>
+            <div><span class="font-bold text-slate-900">PostgreSQL 16:</span> <span class="text-slate-600">ACID storage with binary BYTEA attachments.</span></div>
+            <div><span class="font-bold text-slate-900">Supabase Managed DB:</span> <span class="text-slate-600">Cloud database with SSL transaction pooler.</span></div>
+            <div><span class="font-bold text-slate-900">Render PaaS:</span> <span class="text-slate-600">Production single-domain cloud hosting.</span></div>
+            <div><span class="font-bold text-slate-900">Git & GitHub:</span> <span class="text-slate-600">Automated continuous deployment from main.</span></div>
+            <div><span class="font-bold text-slate-900">ReportLab & PyMuPDF:</span> <span class="text-slate-600">Automated master report PDF compilation.</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 7: PHASE 2 IMPLEMENTATION & MAJOR FEATURES -->
+    <!-- SLIDE 8: PHASE 2 IMPLEMENTATION -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">PHASE 2 DEVELOPMENTS</span>
-        <h2 class="text-2xl font-bold text-white">Implementation: 5 Core Engineering Features</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">PHASE 2 DEVELOPMENTS</span>
+        <h2 class="text-2xl font-bold text-slate-900">Implementation: 5 Core Engineering Features</h2>
       </div>
 
       <div class="space-y-2.5">
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60 flex items-start space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">01</div>
+        <div class="executive-card p-3 rounded-xl flex items-start space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">01</div>
           <div>
-            <h4 class="font-bold text-xs text-white">Zero-Knowledge Biometric Enrollment & Vector Encryption</h4>
-            <p class="text-xs text-slate-300 mt-0.5">Mandatory registration captures exactly 1 face using InspireFace. Extracts 512-d normalized floating point embeddings. The Node.js backend encrypts the vector with AES-256-GCM using a server master key. The raw user photo is purged from memory immediately—never stored on disk.</p>
+            <h4 class="font-bold text-xs text-slate-900">Zero-Knowledge Biometric Enrollment & Vector Encryption</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Mandatory registration captures exactly 1 face using InspireFace. Extracts 512-d normalized floating point embeddings. The Node.js backend encrypts the vector with AES-256-GCM using a server master key. The raw user photo is purged from memory immediately—never stored on disk.</p>
           </div>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60 flex items-start space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">02</div>
+        <div class="executive-card p-3 rounded-xl flex items-start space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">02</div>
           <div>
-            <h4 class="font-bold text-xs text-white">Randomized PRNG LSB Steganography Engine</h4>
-            <p class="text-xs text-slate-300 mt-0.5">Disguises encrypted secret text into lossless PNG carriers. Writes a 24-byte header (CVS1 magic tag, 16-byte random PRNG seed, 4-byte payload size) into initial pixels, then scatters encrypted bits randomly across RGB channels via NumPy default_rng. Resulting image exhibits zero perceptible visual degradation.</p>
+            <h4 class="font-bold text-xs text-slate-900">Randomized PRNG LSB Steganography Engine</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Disguises encrypted secret text into lossless PNG carriers. Writes a 24-byte header (CVS1 magic tag, 16-byte random PRNG seed, 4-byte payload size) into initial pixels, then scatters encrypted bits randomly across RGB channels via NumPy default_rng. Resulting image exhibits zero perceptible visual degradation.</p>
           </div>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60 flex items-start space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">03</div>
+        <div class="executive-card p-3 rounded-xl flex items-start space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">03</div>
           <div>
-            <h4 class="font-bold text-xs text-white">Active Face Guardian Surveillance Loop</h4>
-            <p class="text-xs text-slate-300 mt-0.5">Decryption activates recipient webcam. The AI verifies identity against enrolled template (cosine >= 0.70) and guarantees exactly 1 face. A continuous surveillance loop checks the viewer every 1.5s with a 2s AbortSignal timeout. If the user turns away or a second face appears, text is auto-concealed.</p>
+            <h4 class="font-bold text-xs text-slate-900">Active Face Guardian Surveillance Loop</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Decryption activates recipient webcam. The AI verifies identity against enrolled template (cosine >= 0.70) and guarantees exactly 1 face. A continuous surveillance loop checks the viewer every 1.5s with a 2s AbortSignal timeout. If the user turns away or a second face appears, text is auto-concealed.</p>
           </div>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60 flex items-start space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">04</div>
+        <div class="executive-card p-3 rounded-xl flex items-start space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">04</div>
           <div>
-            <h4 class="font-bold text-xs text-white">Single-Port Cloud Bundling on Render</h4>
-            <p class="text-xs text-slate-300 mt-0.5">Cloud PaaS provides only one public port ($PORT). Team Veltrox engineered a root build script compiling Vite SPA and Express server into a unified artifact. Express 5 acts as reverse proxy, serving React statically from dist/ and handling catch-all SPA routing seamlessly.</p>
+            <h4 class="font-bold text-xs text-slate-900">Single-Port Cloud Bundling on Render</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Cloud PaaS provides only one public port ($PORT). Team Veltrox engineered a root build script compiling Vite SPA and Express server into a unified artifact. Express 5 acts as reverse proxy, serving React statically from dist/ and handling catch-all SPA routing seamlessly.</p>
           </div>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60 flex items-start space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">05</div>
+        <div class="executive-card p-3 rounded-xl flex items-start space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">05</div>
           <div>
-            <h4 class="font-bold text-xs text-white">Forensic Database Self-Healing</h4>
-            <p class="text-xs text-slate-300 mt-0.5">Traditional apps leave persistent traces of decrypted media. Chatvia implements atomic self-healing: upon single-view decryption, PostgreSQL updates attachments with the original clean PNG and nullifies original_png, removing any forensic trace of steganography.</p>
+            <h4 class="font-bold text-xs text-slate-900">Forensic Database Self-Healing</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Traditional apps leave persistent traces of decrypted media. Chatvia implements atomic self-healing: upon single-view decryption, PostgreSQL updates attachments with the original clean PNG and nullifies original_png, removing any forensic trace of steganography.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 8: PHASE 3 TESTING & VERIFICATION -->
+    <!-- SLIDE 9: PHASE 3 TESTING & VERIFICATION -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3 flex items-center justify-between">
         <div>
-          <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">PHASE 3 QUALITY ASSURANCE</span>
-          <h2 class="text-2xl font-bold text-white">System Testing: 20 Test Cases (100% Pass)</h2>
+          <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">PHASE 3 QUALITY ASSURANCE</span>
+          <h2 class="text-2xl font-bold text-slate-900">System Testing: 20 Test Cases (100% Pass)</h2>
         </div>
-        <div class="flex items-center space-x-2">
-          <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs font-bold">20 / 20 PASSED</span>
-        </div>
+        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-300">20 / 20 PASSED</span>
       </div>
 
-      <!-- Test Metrics Bar -->
       <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 mb-3">
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-emerald-400">100%</p>
-          <p class="text-[10px] text-slate-400">Pass Rate</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-emerald-600">100%</p>
+          <p class="text-[10px] text-slate-500 font-semibold">Pass Rate</p>
         </div>
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-teal-400">&lt; 70 ms</p>
-          <p class="text-[10px] text-slate-400">AI Face Check</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-teal-600">&lt; 70 ms</p>
+          <p class="text-[10px] text-slate-500 font-semibold">AI Face Check</p>
         </div>
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-teal-400">&lt; 80 ms</p>
-          <p class="text-[10px] text-slate-400">WS Delivery</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-teal-600">&lt; 80 ms</p>
+          <p class="text-[10px] text-slate-500 font-semibold">WS Delivery</p>
         </div>
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-blue-400">25 MB</p>
-          <p class="text-[10px] text-slate-400">File Quota</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-blue-600">25 MB</p>
+          <p class="text-[10px] text-slate-500 font-semibold">File Quota</p>
         </div>
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-amber-400">2,000 ms</p>
-          <p class="text-[10px] text-slate-400">Abort Timeout</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-amber-600">2,000 ms</p>
+          <p class="text-[10px] text-slate-500 font-semibold">Abort Timeout</p>
         </div>
-        <div class="glass-card p-2 rounded-lg text-center">
-          <p class="text-lg font-bold text-purple-400">0 Bytes</p>
-          <p class="text-[10px] text-slate-400">Plain Storage</p>
+        <div class="executive-card p-2 rounded-lg text-center">
+          <p class="text-lg font-bold text-purple-600">0 Bytes</p>
+          <p class="text-[10px] text-slate-500 font-semibold">Plain Storage</p>
         </div>
       </div>
 
-      <!-- Filterable Test Cases Table -->
-      <div class="glass-card rounded-xl overflow-hidden border border-slate-700/60">
+      <div class="executive-card rounded-xl overflow-hidden border border-slate-200">
         <div class="max-h-72 overflow-y-auto">
-          <table class="w-full text-left text-xs text-slate-300">
-            <thead class="bg-slate-800 text-teal-400 uppercase text-[10px] font-bold sticky top-0">
+          <table class="w-full text-left text-xs text-slate-700">
+            <thead class="bg-slate-100 text-slate-900 uppercase text-[10px] font-bold sticky top-0 border-b border-slate-200">
               <tr>
                 <th class="p-2.5">Test ID</th>
                 <th class="p-2.5">Module</th>
@@ -605,55 +667,48 @@
                 <th class="p-2.5 text-center">Status</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-800 font-mono text-[11px]">
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-REG-02</td>
-                <td class="p-2 text-teal-300">Biometric Enrollment</td>
+            <tbody class="divide-y divide-slate-200 font-mono text-[11px]">
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-REG-02</td>
+                <td class="p-2 text-teal-700">Biometric Enrollment</td>
                 <td class="p-2 font-sans">2 faces in camera view during registration</td>
                 <td class="p-2 font-sans">HTTP 422 rejected; error "Capture exactly one face"</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-KEY-01</td>
-                <td class="p-2 text-teal-300">Friend Key Derivation</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-KEY-01</td>
+                <td class="p-2 text-teal-700">Friend Key Derivation</td>
                 <td class="p-2 font-sans">Both friends input matching shared passphrase</td>
                 <td class="p-2 font-sans">PBKDF2 salted hash verified; IndexedDB key saved</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-STEG-01</td>
-                <td class="p-2 text-teal-300">Randomized LSB</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-STEG-01</td>
+                <td class="p-2 text-teal-700">Randomized LSB</td>
                 <td class="p-2 font-sans">500-char private text in 1.2MB PNG carrier</td>
                 <td class="p-2 font-sans">Header CVS1 written; uniform PRNG scattering; 0 distortion</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-BIO-03</td>
-                <td class="p-2 text-teal-300">Shoulder Surfer Shield</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-BIO-03</td>
+                <td class="p-2 text-teal-700">Shoulder Surfer Shield</td>
                 <td class="p-2 font-sans">Second person enters webcam view while reading</td>
                 <td class="p-2 font-sans">Face count == 2 detected; text auto-concealed immediately</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-BIO-05</td>
-                <td class="p-2 text-teal-300">Network Timeout</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-BIO-05</td>
+                <td class="p-2 text-teal-700">Network Timeout</td>
                 <td class="p-2 font-sans">Network latency > 2,000ms during face verify call</td>
                 <td class="p-2 font-sans">AbortSignal.timeout(2000) cancels request; text hidden safely</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-HEAL-01</td>
-                <td class="p-2 text-teal-300">Forensic Self-Healing</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 font-bold text-slate-900">TC-HEAL-01</td>
+                <td class="p-2 text-teal-700">Forensic Self-Healing</td>
                 <td class="p-2 font-sans">Single-view secret message consumed by recipient</td>
                 <td class="p-2 font-sans">Clean PNG restored to attachments; recovery copy nullified</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
-              </tr>
-              <tr class="hover:bg-slate-800/40">
-                <td class="p-2 font-bold text-white">TC-ATT-01</td>
-                <td class="p-2 text-teal-300">Attachment Quota</td>
-                <td class="p-2 font-sans">File upload of 28 MB (> 25 MB quota limit)</td>
-                <td class="p-2 font-sans">HTTP 413 Payload Too Large; Multer rejects safely</td>
-                <td class="p-2 text-center text-emerald-400 font-bold">PASS</td>
+                <td class="p-2 text-center text-emerald-600 font-bold">PASS</td>
               </tr>
             </tbody>
           </table>
@@ -661,245 +716,236 @@
       </div>
     </div>
 
-    <!-- SLIDE 9: APPLICATION SCREENSHOTS - DESKTOP -->
+    <!-- SLIDE 10: APPLICATION SCREENSHOTS - DESKTOP -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">LIVE VISUAL PROOF</span>
-        <h2 class="text-2xl font-bold text-white">Desktop Application Interface</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">LIVE VISUAL PROOF</span>
+        <h2 class="text-2xl font-bold text-slate-900">Desktop Application Interface</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
-        <div class="lg:col-span-2 glass-card p-2 rounded-xl border border-slate-700/60 overflow-hidden cursor-pointer" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034058.png', 'Chatvia Desktop Application Dashboard')">
-          <img src="screenshots/Screenshot 2026-10-29 034058.png" alt="Chatvia Desktop View" class="w-full h-auto rounded-lg shadow-md hover:scale-[1.01] transition duration-200">
-          <p class="text-center text-[10px] text-slate-400 mt-2"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Click screenshot to view in full resolution</p>
+        <div class="lg:col-span-2 executive-card p-2 rounded-xl overflow-hidden cursor-pointer" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034058.png', 'Chatvia Desktop Application Dashboard')">
+          <img src="screenshots/Screenshot 2026-10-29 034058.png" alt="Chatvia Desktop View" class="w-full h-auto rounded-lg shadow-sm hover:scale-[1.01] transition duration-200">
+          <p class="text-center text-[10px] text-slate-500 mt-2"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Click screenshot to view in full resolution</p>
         </div>
 
         <div class="space-y-3">
-          <div class="glass-card p-3 rounded-xl border border-teal-500/30">
-            <h4 class="font-bold text-xs text-teal-300 mb-1 flex items-center"><i class="fa-solid fa-users mr-1.5"></i> Active Peer Directory</h4>
-            <p class="text-xs text-slate-300">Bilateral friendship system using unique 32-char User ID codes. Online status tracked in real-time via WebSockets.</p>
+          <div class="executive-card p-3 rounded-xl border-l-4 border-l-teal-600">
+            <h4 class="font-bold text-xs text-slate-900 mb-1 flex items-center"><i class="fa-solid fa-users mr-1.5 text-teal-600"></i> Active Peer Directory</h4>
+            <p class="text-xs text-slate-600">Bilateral friendship system using unique 32-char User ID codes. Online status tracked in real-time via WebSockets.</p>
           </div>
-          <div class="glass-card p-3 rounded-xl border border-blue-500/30">
-            <h4 class="font-bold text-xs text-blue-300 mb-1 flex items-center"><i class="fa-solid fa-comments mr-1.5"></i> Real-Time Chat Stream</h4>
-            <p class="text-xs text-slate-300">Instant bidirectional messaging, typing indicators, and support for text, documents, and media attachments up to 25MB.</p>
+          <div class="executive-card p-3 rounded-xl border-l-4 border-l-blue-600">
+            <h4 class="font-bold text-xs text-slate-900 mb-1 flex items-center"><i class="fa-solid fa-comments mr-1.5 text-blue-600"></i> Real-Time Chat Stream</h4>
+            <p class="text-xs text-slate-600">Instant bidirectional messaging, typing indicators, and support for text, documents, and media attachments up to 25MB.</p>
           </div>
-          <div class="glass-card p-3 rounded-xl border border-emerald-500/30">
-            <h4 class="font-bold text-xs text-emerald-300 mb-1 flex items-center"><i class="fa-solid fa-lock mr-1.5"></i> Stego Message Cards</h4>
-            <p class="text-xs text-slate-300">Innocent carrier images displayed in chat stream. Decryption requires camera biometric gating and shared keys.</p>
+          <div class="executive-card p-3 rounded-xl border-l-4 border-l-emerald-600">
+            <h4 class="font-bold text-xs text-slate-900 mb-1 flex items-center"><i class="fa-solid fa-lock mr-1.5 text-emerald-600"></i> Stego Message Cards</h4>
+            <p class="text-xs text-slate-600">Innocent carrier images displayed in chat stream. Decryption requires camera biometric gating and shared keys.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 10: APPLICATION SCREENSHOTS - MOBILE & BIOMETRICS -->
+    <!-- SLIDE 11: APPLICATION SCREENSHOTS - MOBILE & BIOMETRICS -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">LIVE VISUAL PROOF</span>
-        <h2 class="text-2xl font-bold text-white">Biometric Enrollment & Steganographic Messenger</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">LIVE VISUAL PROOF</span>
+        <h2 class="text-2xl font-bold text-slate-900">Biometric Enrollment & Steganographic Messenger</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-        <!-- Screenshot 2 -->
-        <div class="glass-card p-2 rounded-xl border border-slate-700/60 overflow-hidden cursor-pointer text-center" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034122.png', 'Biometric Consent & Registration')">
-          <img src="screenshots/Screenshot 2026-10-29 034122.png" alt="Biometric Registration" class="h-64 mx-auto rounded-lg shadow-md hover:scale-[1.02] transition duration-200">
-          <p class="text-[10px] text-teal-400 font-bold mt-2">Figure 2: Biometric Onboarding</p>
-          <p class="text-[9px] text-slate-400">Mandatory consent & single-face capture</p>
+        <div class="executive-card p-2 rounded-xl overflow-hidden cursor-pointer text-center" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034122.png', 'Biometric Consent & Registration')">
+          <img src="screenshots/Screenshot 2026-10-29 034122.png" alt="Biometric Registration" class="h-64 mx-auto rounded-lg shadow-sm hover:scale-[1.02] transition duration-200">
+          <p class="text-[10px] text-teal-800 font-bold mt-2">Figure 2: Biometric Onboarding</p>
+          <p class="text-[9px] text-slate-500">Mandatory consent & single-face capture</p>
         </div>
 
-        <!-- Screenshot 3 -->
-        <div class="glass-card p-2 rounded-xl border border-slate-700/60 overflow-hidden cursor-pointer text-center" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034136.png', 'Steganographic Composition & Key Management')">
-          <img src="screenshots/Screenshot 2026-10-29 034136.png" alt="Steganographic Composition" class="h-64 mx-auto rounded-lg shadow-md hover:scale-[1.02] transition duration-200">
-          <p class="text-[10px] text-blue-400 font-bold mt-2">Figure 3: Stego Composer & Keys</p>
-          <p class="text-[9px] text-slate-400">Private image message toggle & key setup</p>
+        <div class="executive-card p-2 rounded-xl overflow-hidden cursor-pointer text-center" onclick="openImageModal('screenshots/Screenshot 2026-10-29 034136.png', 'Steganographic Composition & Key Management')">
+          <img src="screenshots/Screenshot 2026-10-29 034136.png" alt="Steganographic Composition" class="h-64 mx-auto rounded-lg shadow-sm hover:scale-[1.02] transition duration-200">
+          <p class="text-[10px] text-blue-800 font-bold mt-2">Figure 3: Stego Composer & Keys</p>
+          <p class="text-[9px] text-slate-500">Private image message toggle & key setup</p>
         </div>
 
-        <!-- Explanation Column -->
         <div class="space-y-2.5">
-          <div class="glass-card p-3 rounded-xl border border-slate-700/60">
-            <h4 class="font-bold text-xs text-white mb-1">Ethical Biometric Safeguards</h4>
-            <p class="text-xs text-slate-300">Explicit consent required. InspireFace validates alignment, rejects multiple faces, and outputs 512-d embeddings. Raw user photographs are destroyed instantly.</p>
+          <div class="executive-card p-3 rounded-xl">
+            <h4 class="font-bold text-xs text-slate-900 mb-1">Ethical Biometric Safeguards</h4>
+            <p class="text-xs text-slate-600">Explicit consent required. InspireFace validates alignment, rejects multiple faces, and outputs 512-d embeddings. Raw user photographs are destroyed instantly.</p>
           </div>
-          <div class="glass-card p-3 rounded-xl border border-slate-700/60">
-            <h4 class="font-bold text-xs text-white mb-1">Zero-Knowledge Key Handshake</h4>
-            <p class="text-xs text-slate-300">Friends confirm a shared passphrase once. Derived WebCrypto keys persist in IndexedDB. Key rotation is blocked while any private message remains unopened.</p>
+          <div class="executive-card p-3 rounded-xl">
+            <h4 class="font-bold text-xs text-slate-900 mb-1">Zero-Knowledge Key Handshake</h4>
+            <p class="text-xs text-slate-600">Friends confirm a shared passphrase once. Derived WebCrypto keys persist in IndexedDB. Key rotation is blocked while any private message remains unopened.</p>
           </div>
-          <div class="glass-card p-3 rounded-xl border border-slate-700/60">
-            <h4 class="font-bold text-xs text-white mb-1">Active Viewer Feedback Banners</h4>
-            <p class="text-xs text-slate-300">If multiple faces or face absence is detected during viewing, real-time alert banners notify the user while instantly shielding confidential text.</p>
+          <div class="executive-card p-3 rounded-xl">
+            <h4 class="font-bold text-xs text-slate-900 mb-1">Active Viewer Feedback Banners</h4>
+            <p class="text-xs text-slate-600">If multiple faces or face absence is detected during viewing, real-time alert banners notify the user while instantly shielding confidential text.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 11: CHALLENGES FACED & SOLUTIONS -->
+    <!-- SLIDE 12: CHALLENGES FACED & SOLUTIONS -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">ENGINEERING LESSONS</span>
-        <h2 class="text-2xl font-bold text-white">Challenges Faced & Engineering Solutions</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">ENGINEERING LESSONS</span>
+        <h2 class="text-2xl font-bold text-slate-900">Challenges Faced & Engineering Solutions</h2>
       </div>
 
       <div class="space-y-2.5">
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-bold text-xs text-white">1. Render Single-Port Limitation ($PORT)</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-400 font-bold">Solved</span>
+            <h4 class="font-bold text-xs text-slate-900">1. Render Single-Port Limitation ($PORT)</h4>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-teal-100 text-teal-800 font-bold">Solved</span>
           </div>
-          <p class="text-xs text-slate-300">Cloud PaaS allows only 1 exposed port, but we required React SPA, Express API, and WebSockets. We built a unified root build pipeline compiling both services, using Express 5 as reverse proxy serving Vite dist/ statically.</p>
+          <p class="text-xs text-slate-600">Cloud PaaS allows only 1 exposed port, but we required React SPA, Express API, and WebSockets. We built a unified root build pipeline compiling both services, using Express 5 as reverse proxy serving Vite dist/ statically.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-bold text-xs text-white">2. Supabase SSL Pooler Rejection</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-bold">Solved</span>
+            <h4 class="font-bold text-xs text-slate-900">2. Supabase SSL Pooler Rejection</h4>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">Solved</span>
           </div>
-          <p class="text-xs text-slate-300">Node.js pg crashed with SELF_SIGNED_CERT_IN_CHAIN on cloud poolers. We implemented dynamic SSL detection in db.ts automatically applying { rejectUnauthorized: false } whenever DATABASE_URL is present.</p>
+          <p class="text-xs text-slate-600">Node.js pg crashed with SELF_SIGNED_CERT_IN_CHAIN on cloud poolers. We implemented dynamic SSL detection in db.ts automatically applying { rejectUnauthorized: false } whenever DATABASE_URL is present.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-bold text-xs text-white">3. Python 3.12 InspireFace C-Bindings Wheels</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">Solved</span>
+            <h4 class="font-bold text-xs text-slate-900">3. Python 3.12 InspireFace C-Bindings Wheels</h4>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Solved</span>
           </div>
-          <p class="text-xs text-slate-300">InspireFace lacks prebuilt wheels for Python 3.13, causing segfaults. We isolated Python 3.12 and introduced a thread synchronization lock (_session_lock) around inference calls to guarantee thread safety.</p>
+          <p class="text-xs text-slate-600">InspireFace lacks prebuilt wheels for Python 3.13, causing segfaults. We isolated Python 3.12 and introduced a thread synchronization lock (_session_lock) around inference calls to guarantee thread safety.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-bold text-xs text-white">4. WebRTC Camera Lifecycle Leaks</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold">Solved</span>
+            <h4 class="font-bold text-xs text-slate-900">4. WebRTC Camera Lifecycle Leaks</h4>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">Solved</span>
           </div>
-          <p class="text-xs text-slate-300">Switching tabs or closing cards left webcam hardware active. We implemented HTML5 visibilitychange listeners and ended event hooks to terminate all video tracks immediately upon backgrounding.</p>
+          <p class="text-xs text-slate-600">Switching tabs or closing cards left webcam hardware active. We implemented HTML5 visibilitychange listeners and ended event hooks to terminate all video tracks immediately upon backgrounding.</p>
         </div>
 
-        <div class="glass-card p-3 rounded-xl border border-slate-700/60">
+        <div class="executive-card p-3 rounded-xl">
           <div class="flex items-center justify-between mb-1">
-            <h4 class="font-bold text-xs text-white">5. Steganographic Visual Artifacts</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-400 font-bold">Solved</span>
+            <h4 class="font-bold text-xs text-slate-900">5. Steganographic Visual Artifacts</h4>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold">Solved</span>
           </div>
-          <p class="text-xs text-slate-300">Sequential LSB causes visible banding in gradients. We engineered a randomized PRNG distribution seeded with a 16-byte cryptographic token, scattering bits across RGB channels with zero perceptual change.</p>
+          <p class="text-xs text-slate-600">Sequential LSB causes visible banding in gradients. We engineered a randomized PRNG distribution seeded with a 16-byte cryptographic token, scattering bits across RGB channels with zero perceptual change.</p>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 12: RESULTS, LIMITATIONS & FUTURE ROADMAP -->
+    <!-- SLIDE 13: RESULTS & FUTURE ROADMAP -->
     <div class="slide w-full flex-col justify-start overflow-y-auto">
       <div class="mb-3">
-        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">PROJECT IMPACT</span>
-        <h2 class="text-2xl font-bold text-white">Results, Limitations & Future Roadmap</h2>
+        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">PROJECT IMPACT</span>
+        <h2 class="text-2xl font-bold text-slate-900">Results, Limitations & Future Roadmap</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Results -->
-        <div class="glass-card p-4 rounded-xl border border-emerald-500/40">
-          <h3 class="font-bold text-sm text-emerald-400 mb-3 flex items-center">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-emerald-600">
+          <h3 class="font-bold text-sm text-emerald-800 mb-3 flex items-center">
             <i class="fa-solid fa-circle-check mr-2"></i> Key Measurable Outcomes
           </h3>
-          <ul class="text-xs text-slate-300 space-y-2.5">
-            <li><b class="text-white">✔ Sub-80ms WebSocket Delivery:</b> Instant real-time synchronization between active clients.</li>
-            <li><b class="text-white">✔ &lt; 70ms Biometric Verification:</b> InspireFace 512-d feature extraction on standard CPUs.</li>
-            <li><b class="text-white">✔ Zero Plaintext Storage:</b> Zero raw face images, zero plaintext messages, and zero stored keys.</li>
-            <li><b class="text-white">✔ 100% Test Pass Rate:</b> 20 of 20 test cases executed and verified without defects.</li>
-            <li><b class="text-white">✔ 24/7 Production Deployment:</b> Fully operational on Render PaaS with Supabase PostgreSQL.</li>
+          <ul class="text-xs text-slate-600 space-y-2.5">
+            <li><b class="text-slate-900">✔ Sub-80ms WebSocket Delivery:</b> Instant real-time synchronization between active clients.</li>
+            <li><b class="text-slate-900">✔ &lt; 70ms Biometric Verification:</b> InspireFace 512-d feature extraction on standard CPUs.</li>
+            <li><b class="text-slate-900">✔ Zero Plaintext Storage:</b> Zero raw face images, zero plaintext messages, and zero stored keys.</li>
+            <li><b class="text-slate-900">✔ 100% Test Pass Rate:</b> 20 of 20 test cases executed and verified without defects.</li>
+            <li><b class="text-slate-900">✔ 24/7 Production Deployment:</b> Fully operational on Render PaaS with Supabase PostgreSQL.</li>
           </ul>
         </div>
 
-        <!-- Limitations & Future -->
-        <div class="glass-card p-4 rounded-xl border border-blue-500/40">
-          <h3 class="font-bold text-sm text-blue-400 mb-3 flex items-center">
+        <div class="executive-card p-4 rounded-xl border-t-4 border-t-blue-600">
+          <h3 class="font-bold text-sm text-blue-800 mb-3 flex items-center">
             <i class="fa-solid fa-rocket mr-2"></i> Limitations & Future Roadmap
           </h3>
-          <ul class="text-xs text-slate-300 space-y-2.5">
-            <li><b class="text-white">✦ Carrier Format Constraint:</b> Currently requires lossless PNGs; future work will expand to FLAC audio and WebM video steganography.</li>
-            <li><b class="text-white">✦ Active Liveness Detection:</b> Future integration of blink detection, head-pose jitter, and micro-movements to defeat printed photograph attacks.</li>
-            <li><b class="text-white">✦ Zero-Knowledge Proofs (zk-SNARKs):</b> Enabling clients to prove biometric identity without sending encrypted embeddings.</li>
-            <li><b class="text-white">✦ Decentralized P2P WebRTC:</b> Direct device-to-device data mesh bypassing central servers entirely.</li>
+          <ul class="text-xs text-slate-600 space-y-2.5">
+            <li><b class="text-slate-900">✦ Carrier Format Constraint:</b> Currently requires lossless PNGs; future work will expand to FLAC audio and WebM video steganography.</li>
+            <li><b class="text-slate-900">✦ Active Liveness Detection:</b> Future integration of blink detection, head-pose jitter, and micro-movements to defeat printed photograph attacks.</li>
+            <li><b class="text-slate-900">✦ Zero-Knowledge Proofs (zk-SNARKs):</b> Enabling clients to prove biometric identity without sending encrypted embeddings.</li>
+            <li><b class="text-slate-900">✦ Decentralized P2P WebRTC:</b> Direct device-to-device data mesh bypassing central servers entirely.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 13: CONCLUSION & Q&A -->
+    <!-- SLIDE 14: CONCLUSION & LIVE DEMO -->
     <div class="slide w-full flex-col justify-center items-center text-center">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-teal-400 text-xs font-semibold mb-3">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold mb-3">
         <span>PROJECT SIGN-OFF & LIVE DEMONSTRATION</span>
       </div>
 
-      <h2 class="text-4xl font-extrabold text-white mb-2">Conclusion & Final Submission</h2>
-      <p class="text-sm text-slate-300 max-w-2xl mb-6">
+      <h2 class="text-4xl font-extrabold text-slate-900 mb-2">Conclusion & Final Submission</h2>
+      <p class="text-sm text-slate-600 max-w-2xl mb-6">
         Chatvia bridges the critical "last-inch" vulnerability gap, proving that physical screen privacy and cryptographic confidentiality can coexist seamlessly without degrading the user experience.
       </p>
 
-      <!-- Live Links Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-4xl mb-8">
-        <a href="https://chatvia-app-k7o7.onrender.com/" target="_blank" class="glass-card p-4 rounded-xl border border-teal-500/50 hover:bg-slate-800 transition flex flex-col items-center group">
-          <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+        <a href="https://chatvia-app-k7o7.onrender.com/" target="_blank" class="executive-card p-4 rounded-xl border-t-4 border-t-teal-600 hover:shadow-lg transition flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
             <i class="fa-solid fa-globe"></i>
           </div>
-          <span class="font-bold text-sm text-white">Live Cloud Application</span>
-          <span class="text-xs text-teal-400 mt-1">chatvia-app-k7o7.onrender.com</span>
+          <span class="font-bold text-sm text-slate-900">Live Cloud Application</span>
+          <span class="text-xs text-teal-700 font-semibold mt-1">chatvia-app-k7o7.onrender.com</span>
         </a>
 
-        <a href="https://github.com/Kishan-Kumar-Hv/hmit" target="_blank" class="glass-card p-4 rounded-xl border border-blue-500/50 hover:bg-slate-800 transition flex flex-col items-center group">
-          <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+        <a href="https://github.com/Kishan-Kumar-Hv/hmit" target="_blank" class="executive-card p-4 rounded-xl border-t-4 border-t-blue-600 hover:shadow-lg transition flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
             <i class="fa-brands fa-github"></i>
           </div>
-          <span class="font-bold text-sm text-white">GitHub Source Repository</span>
-          <span class="text-xs text-blue-400 mt-1">github.com/Kishan-Kumar-Hv/hmit</span>
+          <span class="font-bold text-sm text-slate-900">GitHub Source Repository</span>
+          <span class="text-xs text-blue-700 font-semibold mt-1">github.com/Kishan-Kumar-Hv/hmit</span>
         </a>
 
-        <a href="../Phase_4_Final_Project_Submission_Veltrox.pdf" target="_blank" class="glass-card p-4 rounded-xl border border-emerald-500/50 hover:bg-slate-800 transition flex flex-col items-center group">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+        <a href="../Phase_4_Final_Project_Submission_Veltrox.pdf" target="_blank" class="executive-card p-4 rounded-xl border-t-4 border-t-emerald-600 hover:shadow-lg transition flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
             <i class="fa-solid fa-file-pdf"></i>
           </div>
-          <span class="font-bold text-sm text-white">Master Documentation PDF</span>
-          <span class="text-xs text-emerald-400 mt-1">Phase 4 Comprehensive Report</span>
+          <span class="font-bold text-sm text-slate-900">Master Documentation PDF</span>
+          <span class="text-xs text-emerald-700 font-semibold mt-1">Phase 4 Comprehensive Report</span>
         </a>
       </div>
 
-      <div class="glass-card px-6 py-3 rounded-xl border border-slate-700/60 max-w-xl text-xs text-slate-400">
-        <p class="font-bold text-white mb-0.5">TEAM 65 — VELTROX</p>
+      <div class="executive-card px-6 py-3 rounded-xl max-w-xl text-xs text-slate-600">
+        <p class="font-bold text-slate-900 mb-0.5">TEAM 65 — VELTROX</p>
         <p>Kishan Kumar H V &bull; Santhosh J R &bull; Suhas B R &bull; Dhruva Kumar V M</p>
-        <p class="text-slate-500 mt-1">HackMITTen 2026 | Cybersecurity & Applied AI Track</p>
+        <p class="text-slate-400 mt-1">HackMITTen 2026 | Cybersecurity & Applied AI Track</p>
       </div>
     </div>
 
   </main>
 
   <!-- BOTTOM NAVIGATION DOCK -->
-  <footer class="w-full bg-slate-900/90 border-t border-slate-800 py-3 z-50">
+  <footer class="w-full bg-white border-t border-slate-200 py-3 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <button onclick="prevSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700 transition flex items-center">
+        <button onclick="prevSlide()" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition flex items-center">
           <i class="fa-solid fa-chevron-left mr-1.5"></i> Prev
         </button>
-        <button onclick="nextSlide()" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold transition flex items-center shadow-sm">
+        <button onclick="nextSlide()" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition flex items-center shadow-sm">
           Next <i class="fa-solid fa-chevron-right ml-1.5"></i>
         </button>
       </div>
 
-      <!-- Quick Slide Jump Indicator -->
+      <!-- Slide Indicator Dots -->
       <div class="flex items-center space-x-1.5 overflow-x-auto py-1 max-w-xl">
-        <template id="dotTemplate">
-          <button class="w-2.5 h-2.5 rounded-full transition-all duration-200"></button>
-        </template>
         <div id="dotsContainer" class="flex items-center space-x-1.5"></div>
       </div>
 
-      <div class="text-xs font-mono text-slate-400 flex items-center space-x-2">
+      <div class="text-xs font-mono text-slate-600 flex items-center space-x-2">
         <span>Slide</span>
-        <span id="currentSlideNum" class="font-bold text-teal-400">1</span>
+        <span id="currentSlideNum" class="font-bold text-teal-700">1</span>
         <span>/</span>
-        <span id="totalSlidesNum">13</span>
+        <span id="totalSlidesNum">14</span>
       </div>
     </div>
   </footer>
 
   <!-- IMAGE INSPECTION MODAL -->
-  <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6" onclick="closeImageModal()">
-    <div class="relative max-w-5xl w-full bg-slate-900 border border-slate-700 rounded-2xl p-4 shadow-2xl" onclick="event.stopPropagation()">
+  <div id="imageModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6" onclick="closeImageModal()">
+    <div class="relative max-w-5xl w-full bg-white border border-slate-300 rounded-2xl p-4 shadow-2xl" onclick="event.stopPropagation()">
       <div class="flex justify-between items-center mb-3">
-        <h3 id="modalTitle" class="text-sm font-bold text-white"></h3>
-        <button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1">
+        <h3 id="modalTitle" class="text-sm font-bold text-slate-900"></h3>
+        <button onclick="closeImageModal()" class="text-slate-400 hover:text-slate-800 p-1">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
@@ -907,7 +953,6 @@
     </div>
   </div>
 
-  <!-- SCRIPT FOR INTERACTIVE CONTROLS -->
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -919,10 +964,9 @@
 
     totalSlidesNum.innerText = totalSlides;
 
-    // Generate slide dots
     slides.forEach((_, idx) => {
       const dot = document.createElement('button');
-      dot.className = `w-2 h-2 rounded-full transition-all duration-200 ${idx === 0 ? 'bg-teal-400 w-5' : 'bg-slate-700 hover:bg-slate-500'}`;
+      dot.className = `w-2 h-2 rounded-full transition-all duration-200 ${idx === 0 ? 'bg-teal-600 w-5' : 'bg-slate-300 hover:bg-slate-400'}`;
       dot.title = `Jump to slide ${idx + 1}`;
       dot.onclick = () => showSlide(idx);
       dotsContainer.appendChild(dot);
@@ -935,13 +979,12 @@
       progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
       currentSlideNum.innerText = currentSlide + 1;
 
-      // Update dots
       const dots = dotsContainer.children;
       for (let i = 0; i < dots.length; i++) {
         if (i === currentSlide) {
-          dots[i].className = 'w-5 h-2 rounded-full bg-teal-400 transition-all duration-200';
+          dots[i].className = 'w-5 h-2 rounded-full bg-teal-600 transition-all duration-200';
         } else {
-          dots[i].className = 'w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all duration-200';
+          dots[i].className = 'w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-200';
         }
       }
     }
@@ -967,7 +1010,6 @@
       }
     }
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
         nextSlide();
@@ -984,7 +1026,6 @@
       }
     });
 
-    // Fullscreen toggle
     function toggleFullScreen() {
       if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch(() => {});
@@ -995,7 +1036,6 @@
       }
     }
 
-    // Modal
     function openImageModal(src, title) {
       document.getElementById('modalImg').src = src;
       document.getElementById('modalTitle').innerText = title;
@@ -1006,7 +1046,6 @@
       document.getElementById('imageModal').classList.add('hidden');
     }
 
-    // Architecture Drill-down
     const archDetails = {
       1: "<b>Tier 1: Presentation Tier Details:</b> Powered by React 19 and Vite. Features client-side Web Crypto API deriving non-exportable AES-GCM keys cached in IndexedDB. WebRTC MediaStream grabs camera frames every 1,500ms with a 2,000ms AbortSignal timeout. Active surveillance triggers on-screen warning banners and auto-conceals secret text if face_count != 1 or cosine similarity < 0.70.",
       2: "<b>Tier 2: Gateway & Server Details:</b> Node.js with Express 5 running on a unified single port. Acts as a reverse proxy serving the static React build while proxying WebSocket events and REST endpoints. Holds the server master AES-256-GCM key to encrypt InspireFace templates prior to database insertion. Features a 25MB attachment streaming limit via Multer.",
@@ -1021,9 +1060,9 @@
         const el = document.getElementById(`tier${t}-box`);
         if (el) {
           if (t === tier) {
-            el.classList.add('bg-slate-800/90', 'ring-1', 'ring-teal-400');
+            el.classList.add('bg-teal-50', 'ring-1', 'ring-teal-500');
           } else {
-            el.classList.remove('bg-slate-800/90', 'ring-1', 'ring-teal-400');
+            el.classList.remove('bg-teal-50', 'ring-1', 'ring-teal-500');
           }
         }
       }
