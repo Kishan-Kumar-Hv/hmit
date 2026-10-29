@@ -6,14 +6,31 @@ import { fileURLToPath } from "url";
 
 dotenv.config({ path: fileURLToPath(new URL("../.env", import.meta.url)) });
 
-// PostgreSQL Pool Connection
-export const pool = new Pool({
-  host: process.env.PG_HOST || "localhost",
-  port: Number(process.env.PG_PORT) || 5432,
-  user: process.env.PG_USER || "postgres",
-  password: process.env.PG_PASSWORD,
-  database: process.env.PG_DATABASE || "postgres",
-});
+const isRemoteHost = Boolean(
+  process.env.PG_HOST &&
+  process.env.PG_HOST !== "localhost" &&
+  process.env.PG_HOST !== "127.0.0.1"
+);
+const useSsl =
+  process.env.PG_SSL === "true" ||
+  Boolean(process.env.DATABASE_URL) ||
+  isRemoteHost;
+
+// PostgreSQL Pool Connection (supports Supabase connection string or parameters)
+export const pool = process.env.DATABASE_URL
+  ? new Pool({
+      connectionString: process.env.DATABASE_URL,
+      ssl: useSsl ? { rejectUnauthorized: false } : undefined,
+    })
+  : new Pool({
+      host: process.env.PG_HOST || "localhost",
+      port: Number(process.env.PG_PORT) || 5432,
+      user: process.env.PG_USER || "postgres",
+      password: process.env.PG_PASSWORD,
+      database: process.env.PG_DATABASE || "postgres",
+      ssl: useSsl ? { rejectUnauthorized: false } : undefined,
+    });
+
 
 export function hashPassword(password: string): string {
   return crypto.createHash("sha256").update(password).digest("hex");
