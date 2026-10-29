@@ -6,6 +6,9 @@ import crypto from "crypto";
 import multer from "multer";
 import jwt from "jsonwebtoken";
 import { promisify } from "util";
+import path from "path";
+import fs from "fs";
+
 
 import {
   pool,
@@ -1275,8 +1278,30 @@ wss.on("connection", (ws, req) => {
   });
 });
 
+// In production, serve the built frontend client if available
+const possibleClientPaths = [
+  path.resolve(process.cwd(), "../client/dist"),
+  path.resolve(process.cwd(), "client/dist"),
+  path.resolve(process.cwd(), "dist/client"),
+];
+
+for (const clientPath of possibleClientPaths) {
+  if (fs.existsSync(clientPath)) {
+    app.use(express.static(clientPath));
+    app.get("*", (req, res, next) => {
+      if (req.path.startsWith("/api") || req.path.startsWith("/ws")) {
+        return next();
+      }
+      res.sendFile(path.join(clientPath, "index.html"));
+    });
+    console.log(`Serving static client files from ${clientPath}`);
+    break;
+  }
+}
+
 // Initialize PostgreSQL database and start listening
 initDatabase()
+
   .then(() => {
     server.listen(PORT, () => {
       console.log(`Chatvia Server running on http://localhost:${PORT}`);
